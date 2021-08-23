@@ -1,0 +1,734 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+*{
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+}
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+    font-size: 100%;
+}
+header{
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    /* position: fixed; */
+    background-color: white;
+    z-index: 1000;
+}
+header > .bar{
+    display: none;
+}
+header > .logo{
+    width: 15%;
+    color: black;
+    font-size: 2rem;
+    margin-top: .5rem;
+}
+header > .logo > i{
+    color: black;
+    top: 50rem;
+    margin-left: 35%;
+}
+header > .logo > span{
+    text-transform: capitalize;
+    font-weight: 900;
+    color: black;
+}
+header > .menu{
+    width: 70%;
+    
+}
+header > .menu > ul{
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+header > .menu > ul a{
+    text-decoration: none;
+    color: black;
+    text-transform: capitalize;
+    display: block;
+    padding: 1rem 1rem;
+    font-size: 1.3rem;
+}
+header > .menu > ul a:hover{
+    background-color: green;
+    color: white;
+}
+header > .icon{
+    width: 15%;
+    margin-top: .8%;
+}
+header > .icon > i{
+    padding: .4rem .4rem;
+    align-items: center;
+    margin-left: 5%;
+    font-size: 1.5rem;
+}
+header > .icon > i:first-child{
+    margin-left: 20%;
+}
+header > .icon > i:hover{
+    transition: 1s;
+    transform: rotate(360deg);
+}
+section.menu2{
+    display: none;
+    position: fixed;
+    width: 100%;
+    top: 5.5%;
+    z-index: 1000;
+    background-color: white;
+}
+section.menu2 > a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 1rem .5rem;
+    text-transform: capitalize;
+    font-size: 2rem;
+}
+section.menu2 > a:hover{
+    background-color: green;
+    color: white;
+}
+section.form_search{
+    width: 100%;
+    top: 8%;
+    position: fixed;
+    background-color: rgba(14, 12, 12, 0.8);
+    padding: .5rem 0;
+    display: none;
+    z-index: 1000;
+}
+section.form_search > input{
+    width: 93%;
+    margin-left: 1.5%;
+    outline: none;
+    padding: .3rem .5rem;
+    font-size: 1.5rem;
+    border-radius: 5px;
+}
+section.form_search > i{
+    color: white;
+    font-size: 1.5rem;
+    margin-left: .5%;
+}
+div.home{
+    width: 100%;
+    
+    height: 50rem;
+    z-index: 1;
+}
+div.home > div{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+div.home > div > .slide{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+div.home > div > .slide:first-child{
+    display: block;
+}
+div.home > div > .slide > img{
+    width: 100%;
+    height: 100%;
+}
+div.dishes{
+    width: 100%;
+    background-color: #e6e6e6;
+}
+div.dishes > div{
+    width: 80%;
+    margin: 0 auto;
+    padding: 2% 0;
+}
+div.dishes > div > p{
+    text-align: center;
+}
+.title1{
+    text-transform: capitalize;
+    color: green;
+    font-weight: bolder;
+    font-size: 1.5rem;
+}
+.title2{
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 2rem;
+    color: darkblue;
+}
+div.dishes > div > .albums{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+div.dishes > div > .albums > .album{
+    width: 30%;
+    margin-top: 3%;
+    margin-left: 3%;
+    line-height: 250%;
+    background-color: white;
+    box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.5);
+}
+div.dishes > div > .albums > .album > img{
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+}
+div.dishes > div > .albums > .album > .dishes_name{
+    text-transform: capitalize;
+    color: green;
+    font-weight: bolder;
+    font-size: 1.8rem;
+    margin-left: 1rem;
+}
+div.dishes > div > .albums > .album > .star{
+    color: green;
+    margin-left: 1rem;
+}
+div.dishes > div > .albums > .album > .buy{
+    margin: .5rem 0 1.5rem 1rem;
+}
+div.dishes > div > .albums > .album > .buy > span{
+    color: green;
+    font-weight: bolder;
+    font-size: 1.2rem;
+}
+div.dishes > div > .albums > .album > .buy > a{
+    background-color: green;
+    padding: .5rem .5rem;
+    color: white;
+    font-weight: bolder;
+    border-radius: 5px;
+    margin-left: 1.5rem;
+}
+div.dishes > div > .albums > .album > .buy > a:hover{
+    background-color: rgba(64, 141, 1, 0.8);
+}
+div.about{
+    width: 100%;
+    background-color: white;
+}
+div.about > div{
+    width: 80%;
+    margin: 0 auto;
+    padding: 2% 0;
+}
+div.about > div > p{
+    text-align: center;
+}
+div.about > div > .shape_content{
+    display: flex;
+    flex-wrap: wrap;
+}
+div.about > div > .shape_content > .shape{
+    width: 50%;
+}
+div.about > div > .shape_content img{
+    width: 100%;
+}
+div.about > div > .shape_content .content{
+    width: 50%;
+}
+div.about > div > .shape_content .content > h2{
+    font-size: 3rem;
+    color: darkblue;
+    margin-top: 2rem; margin-bottom: 1.5rem;
+}
+div.about > div > .shape_content > .content > p{
+    color: #999999;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+div.about > div > .shape_content > .content > ul{
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+div.about > div > .shape_content > .content > ul  a{
+    text-decoration: none;
+    color: black;
+    padding: .8rem 1.5rem;
+    background-color: #cccccc;
+    border: 1px solid #999999;
+    border-radius: 5px;
+    display: block;
+}
+div.about > div > .shape_content > .content > ul i{
+    color: green;
+}
+div.about > div > .shape_content > .content > a{
+    padding: .5rem 1.5rem;
+    background-color: darkblue;
+    color: white;
+    display: block;
+    text-align: center;
+    width: 25%;
+    border-radius: 5px;
+    text-decoration: none;
+}
+div.menu{
+    width: 100%;
+    background-color: #e6e6e6;
+}
+div.menu > div{
+    width: 80%;
+    margin: 0 auto;
+    padding: 2% 0;
+}
+div.menu > div > p{
+    text-align: center;
+}
+div.menu > div > .menu_shape{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 85rem;
+    overflow: hidden;
+}
+div.menu > div > .menu_shape > div{
+    width: 23%;
+    height: 25rem;
+    margin-right: 2%;
+    background-color: white;
+    padding: .8rem;
+    margin-top: 3%;
+    position: relative;
+}
+div.menu > div > .menu_shape > div > img{
+    width: 100%;
+    height: 13rem;
+    object-fit: cover;
+}
+div.menu > div > .menu_shape > div > .stars{
+    color: green;
+}
+div.menu > div > .menu_shape > div > h3{
+    color: darkblue;
+    font-size: 1.5rem;
+}
+div.menu > div > .menu_shape > div > ul{
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin-top: .5rem;
+}
+div.menu > div > .menu_shape > div > ul a{
+    display: block;
+    padding: .3rem .5rem;
+    background-color: darkblue;
+    color: white;
+    text-decoration: none;
+    margin-right: 1rem;
+    border-radius: 5px;
+}
+div.menu > div > .menu_shape > div > ul > li:last-child{
+    color: green;
+    font-size: 1.4rem;
+    font-weight: bolder;
+}
+div.menu > div > .menu_shape > div > .heart{
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+    padding: .5rem .5rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+}
+/* div.menu > div > .menu_shape > div > .heart1_1{
+    color: white;
+} */
+div.menu > div > .menu_shape > div > .heartt{
+    color: red;
+}
+div.menu > div > .shapePlus{
+    text-decoration: underline;
+    font-size: 1.5rem;
+    display: none;
+    cursor: pointer;
+    margin: 1rem 0;
+}
+div.menu > div > .shapeReduce{
+    text-decoration: underline;
+    font-size: 1.5rem;
+    display: none;
+    cursor: pointer;
+    margin: 1rem 0;
+}
+div.review{
+    width: 100%;
+    background-color: white;
+}
+div.review > div{
+    width: 80%;
+    margin: 0 auto;
+    padding: 2% 0;
+}
+div.review > div > p{
+    text-align: center;
+}
+div.review > div  .review_content > .shapes{
+    display: flex;
+}
+div.review > div > .content{
+    margin-top: 3rem;
+}
+div.review > div  .review_content > .shapes > div.shape{
+    width: 15%;
+    margin-right: 5%;
+}
+div.review > div  .review_content > .shapes > div.shape > img{
+    border-radius: 50%;
+    width: 100%;
+}
+div.review > div  .review_content > .shapes > div.name{
+    width: 60%;
+}
+div.review > div  .review_content > .shapes > div.name > p{
+    color: green;
+}
+div.review > div  .review_content > .shapes > i{
+    width: 20%;
+    font-size: 2.5rem;
+    height: 0rem;
+    color: #999999;
+}
+div.review > div  .review_content > p{
+    margin-top: 2rem;
+}
+div.order{
+    width: 100%;
+    background-color: #e6e6e6;
+}
+div.order > div{
+    width: 60%;
+    margin: 0 auto;
+    padding: 2% 0;
+}
+div.order > div > p{
+    text-align: center;
+}
+div.order > div > form{
+    background-color: white;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+div.order > div > form > .input{
+    display: flex;
+}
+div.order > div > form > .input > div{
+    width: 50%;
+}
+div.order > div > form > .input > div > input{
+    width: 95%;
+    height: 2.5rem;
+    border-radius: 5px;
+    background-color: #e6e6e6;
+    padding: .5rem .5rem;
+    font-size: 1rem;
+    margin-top: .5rem; margin-bottom: .5rem;
+}
+div.order > div > form > .input > div > label{
+    color: #4e4c4c;
+    font-size: 1.2rem;
+}
+div.order > div > form > .input > div > textarea{
+    width: 98%;
+    border-radius: 5px;
+    background-color: #e6e6e6;
+    font-size: 1rem;
+    margin-top: .5rem; margin-bottom: .5rem;
+    padding: .5rem .5rem;
+}
+div.order > div > form > .input > div > textarea:focus, div.order > div > form > .input > div > input:focus{
+    border: 1px solid green;
+}
+div.order > div > form > a{
+    text-decoration: none;
+    padding: .5rem 2rem;
+    background-color: darkblue;
+    color: white;
+    margin: auto;
+    display: block;
+    width: 20%;
+    text-align: center;
+}
+
+div.load{
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 10000;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+div.load > img{
+    width: 20rem;
+}
+div.load_off{
+    top: 120%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1500px) {
+    html{
+        font-size: 80%;
+    }
+    div.home{
+        top: 5%;
+    }
+    section.form_search{
+        top: 5%;
+    }
+}
+@media screen and (max-width: 1151px) {
+    html{
+        font-size: 50%;
+    }
+    div.home{
+        top: 3%;
+    }
+    section.form_search{
+        top: 3.5%;
+    }
+    div.about > div > .shape_content > .content > ul > li:last-child{
+        width: 100%;
+        text-align: center;
+    }
+    div.about > div > .shape_content > .content > ul > li:first-child,li:nth-child(2){
+        width: 48%;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+    div.order > div{
+        width: 70%;
+    }
+}
+@media screen and (max-width: 750px) {
+    html{
+        font-size: 90%;
+    }
+    header > .menu{
+        display: none;
+    }
+    header > .logo{
+        width: 70%;
+        font-size: 2.5rem;
+    }
+    header > .logo > i{
+        margin-left: 40%;
+    }
+    header > .bar{
+        display: block;
+        width: 10%;
+    }
+    header > .bar > i{
+        font-size: 3rem;
+        margin-top: 10%;
+        margin-left: 25%;
+    }
+    header > .icon{
+        width: 20%;
+    }
+    header > .icon > i{
+        border: none;
+        padding: 0;
+        margin-left: 4%;
+        border-radius: 0;
+        font-size: 1.8rem;
+        margin-top: 6%;
+    }
+    header > .icon > i:hover{
+        background-color: white;
+        color: black;
+        transform: none;
+        transition: none;
+    }
+    section.form_search{
+        top: 7%;
+    }
+    div.home{
+        height: 90%;
+    }
+    div.dishes > div > .albums > .album{
+        width: 44%;
+        margin: 2%;
+    }
+    div.dishes > div > .albums > .album > img{
+        height: 16rem;
+    }
+    section.menu2{
+        top: 7%;
+    }
+    div.about > div > .shape_content > .shape{
+        width: 100%;
+    }
+    div.about > div > .shape_content .content{
+        width: 100%;
+    }
+    div.about > div > .shape_content > .content > a{
+        margin: auto;
+        width: 40%;
+        font-size: 1.5rem;
+    }
+    div.menu > div > .menu_shape > div{
+        width: 48%;
+        
+    }
+    div.menu > div > .menu_shape{
+        height: 135rem;
+    }
+    div.order > div{
+        width: 80%;
+    }
+    div.order > div > form > a{
+        width: 45%;
+    }
+}
+@media screen and (max-width: 620px) {
+    header > .icon > i{
+        font-size: 1.2rem;
+        margin-top: 12%;
+    }
+    header > .logo{
+        font-size: 2rem;
+    }
+    header > .bar > i{
+        font-size: 2.5rem;
+    }
+    div.home{
+        height: 70%;
+    }
+    section.form_search{
+        top: 5.5%;
+    }
+    section.form_search > input{
+        width: 90%;
+    }
+    div.dishes > div > .albums > .album > img{
+        height: 13rem;
+    }
+    section.menu2{
+        top: 6%;
+    }
+}
+@media screen and (max-width: 590px) {
+    div.dishes > div > .albums > .album{
+        width: 100%;
+    }
+    div.dishes > div > .albums > .album > img{
+        height: 25rem;
+    }
+    div.menu > div > .shapePlus{
+        display: block;
+    }
+    div.menu > div > .menu_shape{
+        height: 68rem;
+        /* overflow: auto; */
+    }
+    div.menu > div > .menu_shape > div{
+        width: 100%;
+        height: 33rem;
+    }
+    div.menu > div > .menu_shape > div > img{
+        height: 20rem;
+    }
+    div.menu > div > .menu_shape > div > ul a{
+        padding: .5rem 2rem;
+    }
+    div.menu > div > .menu_shape > div > ul > li:last-child{
+        font-size: 1.6rem;
+    }
+}
+@media screen and (max-width: 420px) {
+    header > .icon > i{
+        font-size: 1rem;
+        margin-top: 15%;
+    }
+    header > .logo > i{
+        margin-left: 35%;
+    }
+    div.home{
+        height: 60%;
+    }
+    div.order > div{
+        width: 95%;
+    }
+}
+@media screen and (max-width: 360px) {
+    header > .icon > i{
+        font-size: .8rem;
+        margin-top: 15%;
+    }
+    header > .logo{
+        font-size: 1.5rem;
+    }
+    header > .bar > i{
+        font-size: 2rem;
+    }
+    header > .logo > i{
+        margin-left: 38%;
+    }
+    div.home{
+        height: 50%;
+    }
+    section.form_search{
+        top: 5%;
+    }
+    div.dishes > div > .albums > .album > img{
+        height: 15rem;
+    }
+    section.menu2{
+        top: 5%;
+    }
+    div.menu > div > .menu_shape > div > ul a{
+        padding: .5rem 1rem;
+    }
+    div.order > div{
+        width: 98%;
+    }
+    div.order > div > form > a{
+        width: 50%;
+    }
+}
