@@ -60,22 +60,6 @@ function slides() {
     setTimeout(slides,4000);
 }
 
-// function heart(choseId) {
-//     var heart = document.querySelectorAll('.menu_shape > div > .heart');
-//     for(var i = 0; i < heart.length; i++){ 
-//         heart[i].style.color = 'white';
-//     var c = document.getElementById(choseId);
-//     c.style.color = 'red';
-//     }
-// }
-
-// $(document).ready(function() {
-//     $('.heart').click(function() {
-//         $('.heart').css({
-//             'color' : 'white'
-//         });
-//     });
-// });
 
 $(document).ready(function() {
     var heart = document.querySelectorAll('i.heart')
@@ -88,24 +72,35 @@ $(document).ready(function() {
 
 
 
-function shapePlus(shapeId) {
-    var shape = document.querySelector('.menu_shape');
-    for(var i = 0; i < shape.length; i++)
-        shape[i].style.height = '100%';
-    var s = document.getElementById(shapeId);
-    s.style.height = '100%';
-    s.style.overflow = 'visible';
-}
+// function shapePlus(shapeId) {
+//     var shape = document.querySelector('.menu_shape');
+//     for(var i = 0; i < shape.length; i++)
+//         shape[i].style.height = '100%';
+//     var s = document.getElementById(shapeId);
+//     s.style.height = '100%';
+//     s.style.overflow = 'visible';
+// }
 
 $(document).ready(function() {
     $(".shapePlus").click(function(){
+        $(this).hide();
         $(".shapeReduce").show();
-        $(".shapePlus").hide();
-      });
+        // $(".shapePlus").hide();
+    });
       
     $(".shapeReduce").click(function(){
+        $(this).hide();
         $(".shapePlus").show();
-        $(".shapeReduce").hide();
+        // $(".shapeReduce").hide();
+    });
+});
+
+$(document).ready(function() {
+    $('.shapePlus').click(function() {
+        $('.menu_shape').css({
+            'height' : '100%',
+            'overflow' : 'visible'
+        });
     });
 });
 
@@ -113,7 +108,7 @@ $(document).ready(function() {
     $('.shapeReduce').click(function() {
         $('.menu_shape').css({
             'height' : '68rem',
-            'overflow' : 'hiden'
+            'overflow' : 'hidden'
         });
     });
 });
