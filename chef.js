@@ -143,15 +143,10 @@ function load() {
 }
 
 function loadOff() {
-    setInterval(load,5000);
+    setInterval(load,3000);
 }
 window.onload = loadOff;
 
 
 
 
-function() {
-    var slide = document.querySelectorAll('div.home .slide');
-    for(var i = 0; i < slide.length; i++) 
-        console.log(i);
-}
