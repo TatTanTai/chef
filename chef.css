@@ -665,7 +665,8 @@ div.load_off{
     }
     div.menu > div > .menu_shape{
         height: 68rem;
-        /* overflow: auto; */
+        overflow: hidden;
+        
     }
     div.menu > div > .menu_shape > div{
         width: 100%;
@@ -730,5 +731,30 @@ div.load_off{
     }
     div.order > div > form > a{
         width: 50%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    header > .logo > i{
+        margin-left: 33%;
+    }
+    header > .logo{
+        width: 60%;
+    }
+    header > .icon{
+        width: 30%;
+    }
+    div.menu > div > .menu_shape > div > ul > li:last-child{
+        font-size: 1.2rem;
+    }
+    div.menu > div > .menu_shape > div > ul a{
+        margin: 0;
+        padding: .5rem .5rem;
+    }
+    div.menu > div > .menu_shape > div > img{
+        height: 15rem;
+    }
+    div.menu > div > .menu_shape > div{
+        height: 27rem;
     }
 }
