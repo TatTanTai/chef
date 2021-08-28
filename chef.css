@@ -1174,6 +1174,15 @@ div.load_off{
         width: 30%;
         margin-top: 3%;
     }
+    section.form_cart > .sum > p, section.form_cart > .sum > div{
+        font-size: 1rem;
+    }
+    .numberCartttt{
+        right: .5rem;
+    }
+    div.order > div > form > a{
+        width: 60%;
+    }
 }
 @media only screen and (max-width: 23.750em){
     
