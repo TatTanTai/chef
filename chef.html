@@ -2,11 +2,12 @@
 <html>
     <head>
         <meta http-equiv="UTF-8">
+        <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="styleSheet">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link href="chef.css" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        
     </head>
     <body>
         <header id="header">
@@ -35,10 +36,9 @@
                 </ul>
             </nav>
             <div class="icon">
-                <i class="fas fa-search search"></i>
+                <i class="fas fa-search icon_search"></i>
                 <i class="fas fa-heart"></i>
-                <i class="fas fa-shopping-cart cart"></i>
-            </div>
+                <i class="fas fa-shopping-cart icon_cart" id="icon_cart"></i><span class="numberCartttt">0</span>
         </header>
         <section class="menu2">
             <a href="#home">home</a>
@@ -51,6 +51,24 @@
         <section class="form_search">
             <input type="search" placeholder="Search...">
             <i class="fas fa-search"></i>
+        </section>
+        <section class="form_cart" >
+            <div class="cart_content">
+                <ul id="form_cart">
+                    <li>Sản phẩm</li>
+                    <li>Số lượng</li>
+                    <li>Giá tiền</li>
+                    <li>Xóa</li>
+                </ul>
+                <div class="cartRow" id="cart">
+                    
+                </div>
+            </div>
+            <div class="sum">
+                <p>Thành tiền:</p>
+                <div class="prices">$0</div>
+                <a href="#" class="sums">Mua</a>
+            </div>
         </section>
         <div class="home" id="home">
             <div>
@@ -72,97 +90,103 @@
             <div>
                 <p class="title1">about us</p>
                 <p class="title2">why chose us?</p>
-                <div class="albums">
-                    <div class="album">
-                        <img src="shape/m2.jpg">
-                        <p class="dishes_name">tasty food</p>
-                        <p class="star">
+                <div class="albums" id="add">
+                    <div class="album box" id="add1">
+                        
+                        <img src="shape/product1.jpg" class="imges">
+                        <p class="dishes_name name" id="title">Mỳ Ý</p>
+                        <div class="star">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star-half-alt"></i>
-                        </p>
-                        <div class="buy">
-                            <span>$15.99</span>
-                            <a>Add To cart</a>
+                        </div>
+                        <div class="buys">
+                            <p id="buy" class="buy">$20.99</p>
+                            <a href="javascript:;" class="addTocart" rel="1">Add To cart</a>
                         </div>
                     </div>
-                    <div class="album">
-                        <img src="shape/m3.jpg">
-                        <p class="dishes_name">tasty food</p>
-                        <p class="star">
+                    <div class="album box" id="add2">
+                        
+                        <img src="shape/product2.jpg" class="imges">
+                        <p class="dishes_name name" id="title">Bò Bít Tét</p>
+                        <div class="star">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star-half-alt"></i>
-                        </p>
-                        <div class="buy">
-                            <span>$15.99</span>
-                            <a>Add To cart</a>
                         </div>
-                    </div>
-                    
-                    <div class="album">
-                        <img src="shape/m5.jpg">
-                        <p class="dishes_name">tasty food</p>
-                        <p class="star">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </p>
-                        <div class="buy">
-                            <span>$15.99</span>
-                            <a>Add To cart</a>
-                        </div>
-                    </div>
-                    <div class="album">
-                        <img src="shape/m6.jpeg">
-                        <p class="dishes_name">tasty food</p>
-                        <p class="star">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </p>
-                        <div class="buy">
-                            <span>$15.99</span>
-                            <a>Add To cart</a>
-                        </div>
-                    </div>
-                    <div class="album">
-                        <img src="shape/m7.jpg">
-                        <p class="dishes_name">tasty food</p>
-                        <p class="star">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </p>
-                        <div class="buy">
-                            <span>$15.99</span>
-                            <a>Add To cart</a>
+                        <div class="buys">
+                            <p id="buy" class="buy">$21.99</p> 
+                            <a href="javascript:;" class="addTocart" rel="2">Add To cart</a>
                         </div>
                     </div>
                     
-                    <div class="album">
-                        <img src="shape/m9.jpg">
-                        <p class="dishes_name">tasty food</p>
-                        <p class="star">
+                    <div class="album box">
+                        
+                        <img src="shape/product3.jpg" class="imges">
+                        <p class="dishes_name name">pizza</p>
+                        <div class="star">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star-half-alt"></i>
-                        </p>
-                        <div class="buy">
-                            <span>$15.99</span>
-                            <a>Add To cart</a>
+                        </div>
+                        <div class="buys">
+                            <p id="buy" class="buy">$22.99</p>
+                            <a href="javascript:;" class="addTocart"rel="3">Add To cart</a>
+                        </div>
+                    </div>
+                    <div class="album box">
+                        
+                        <img src="shape/product4.jpg" class="imges">
+                        <p class="dishes_name name">gan ngỗng</p>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="buys">
+                            <p id="buy" class="buy">$23.99</p>
+                            <a href="javascript:;" class="addTocart" rel="4">Add To cart</a>
+                        </div>
+                    </div>
+                    <div class="album box">
+                       
+                        <img src="shape/product5.jpg" class="imges">
+                        <p class="dishes_name name">bánh kẹp</p>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="buys">
+                            <p id="buy" class="buy">$24.99</p>
+                            <a href="javascript:;" class="addTocart" rel="5">Add To cart</a>
+                        </div>
+                    </div>
+                    
+                    <div class="album box">
+                        
+                        <img src="shape/product6.jpg" class="imges">
+                        <p class="dishes_name name">gà nướng</p>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="buys">
+                            <p id="buy" class="buy">$25.99</p>
+                            <a href="javascript:;" class="addTocart" rel="6">Add To cart</a>
                         </div>
                     </div>
                 </div>
@@ -200,8 +224,9 @@
                 <p class="title1">about menu</p>
                 <p class="title2">today's speciality?</p>
                 <div class="menu_shape" id="menu_shape">
-                    <div class="slide">
-                        <img src="shape/menu-1.jpg">
+                    <div class="slide box">
+                        <img src="shape/menu-1.jpg" class="imges">
+                        <p class="menu_name name">Pizza</p>
                         <p class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -209,18 +234,19 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star-half-alt"></i>
                         </p>
-                        <h3>Delicious Food</h3>
+                        
                         <p class="content">Lorem Ipsum Dolor Sit, Amet</p>
                         <p class="content">Consectetur Adipisicing Elit.</p>
                         <p class="content">Excepturi, Accusantium.</p>
-                        <ul>
-                            <li><a href="#">Add To Cart</a></li>
-                            <li>$ 12.99</li>
-                        </ul>
+                        <div class="buys">
+                            <p id="buy" class="buy">$20.99</p>
+                            <a href="javascript:;" class="addTocart">Add To cart</a>
+                        </div>
                         <i class="fas fa-heart heart1_1 heart"></i>
                     </div>
-                    <div class="slide">
-                        <img src="shape/menu-2.jpg">
+                    <div class="slide box">
+                        <img src="shape/menu-2.jpg" class="imges">
+                        <p class="menu_name name">Humburger</p>
                         <p class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -228,18 +254,19 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star-half-alt"></i>
                         </p>
-                        <h3>Delicious Food</h3>
+                        
                         <p class="content">Lorem Ipsum Dolor Sit, Amet</p>
                         <p class="content">Consectetur Adipisicing Elit.</p>
                         <p class="content">Excepturi, Accusantium.</p>
-                        <ul>
-                            <li><a href="#">Add To Cart</a></li>
-                            <li>$ 12.99</li>
-                        </ul>
+                        <div class="buys">
+                            <p id="buy" class="buy">$20.99</p>
+                            <a href="javascript:;" class="addTocart">Add To cart</a>
+                        </div>
                         <i class="fas fa-heart heart1_2 heart"></i>
                     </div>
-                    <div class="slide">
-                        <img class="img" src="shape/menu-3.jpg">
+                    <div class="slide box">
+                        <img src="shape/menu-3.jpg" class="imges">
+                        <p class="menu_name name">Bánh Chuối</p>
                         <p class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -247,18 +274,19 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star-half-alt"></i>
                         </p>
-                        <h3>Delicious Food</h3>
+                        
                         <p class="content">Lorem Ipsum Dolor Sit, Amet</p>
                         <p class="content">Consectetur Adipisicing Elit.</p>
                         <p class="content">Excepturi, Accusantium.</p>
-                        <ul>
-                            <li><a href="#">Add To Cart</a></li>
-                            <li>$ 12.99</li>
-                        </ul>
+                        <div class="buys">
+                            <p id="buy" class="buy">$20.99</p>
+                            <a href="javascript:;" class="addTocart">Add To cart</a>
+                        </div>
                         <i class="fas fa-heart heart1_3 heart"></i>
                     </div>
-                    <div class="slide">
-                        <img src="shape/menu-4.jpg">
+                    <div class="slide box">
+                        <img src="shape/menu-4.jpg" class="imges">
+                        <p class="menu_name name">Kem</p>
                         <p class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -266,18 +294,19 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star-half-alt"></i>
                         </p>
-                        <h3>Delicious Food</h3>
+                        
                         <p class="content">Lorem Ipsum Dolor Sit, Amet</p>
                         <p class="content">Consectetur Adipisicing Elit.</p>
                         <p class="content">Excepturi, Accusantium.</p>
-                        <ul>
-                            <li><a href="#">Add To Cart</a></li>
-                            <li>$ 12.99</li>
-                        </ul>
+                        <div class="buys">
+                            <p id="buy" class="buy">$20.99</p>
+                            <a href="javascript:;" class="addTocart">Add To cart</a>
+                        </div>
                         <i class="fas fa-heart heart1_4 heart"></i>
                     </div>
-                    <div class="slide">
-                        <img src="shape/menu-5.jpg">
+                    <div class="slide box">
+                        <img src="shape/menu-5.jpg" class="imges">
+                        <p class="menu_name name">Bánh Trái Cây</p>
                         <p class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -285,18 +314,19 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star-half-alt"></i>
                         </p>
-                        <h3>Delicious Food</h3>
+                        
                         <p class="content">Lorem Ipsum Dolor Sit, Amet</p>
                         <p class="content">Consectetur Adipisicing Elit.</p>
                         <p class="content">Excepturi, Accusantium.</p>
-                        <ul>
-                            <li><a href="#">Add To Cart</a></li>
-                            <li>$ 12.99</li>
-                        </ul>
+                        <div class="buys">
+                            <p id="buy" class="buy">$20.99</p>
+                            <a href="javascript:;" class="addTocart">Add To cart</a>
+                        </div>
                         <i class="fas fa-heart heart1_5 heart"></i>
                     </div>
-                    <div class="slide">
-                        <img src="shape/menu-6.jpg">
+                    <div class="slide box">
+                        <img src="shape/menu-6.jpg" class="imges">
+                        <p class="menu_name name">Kem Than Tre</p>
                         <p class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -304,18 +334,19 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star-half-alt"></i>
                         </p>
-                        <h3>Delicious Food</h3>
+                        
                         <p class="content">Lorem Ipsum Dolor Sit, Amet</p>
                         <p class="content">Consectetur Adipisicing Elit.</p>
                         <p class="content">Excepturi, Accusantium.</p>
-                        <ul>
-                            <li><a href="#">Add To Cart</a></li>
-                            <li>$ 12.99</li>
-                        </ul>
+                        <div class="buys">
+                            <p id="buy" class="buy">$20.99</p>
+                            <a href="javascript:;" class="addTocart">Add To cart</a>
+                        </div>
                         <i class="fas fa-heart heart1_6 heart"></i>
                     </div>
-                    <div class="slide">
-                        <img src="shape/menu-7.jpg">
+                    <div class="slide box">
+                        <img src="shape/menu-7.jpg" class="imges">
+                        <p class="menu_name name">Nước Trái Cây</p>
                         <p class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -323,18 +354,19 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star-half-alt"></i>
                         </p>
-                        <h3>Delicious Food</h3>
+                        
                         <p class="content">Lorem Ipsum Dolor Sit, Amet</p>
                         <p class="content">Consectetur Adipisicing Elit.</p>
                         <p class="content">Excepturi, Accusantium.</p>
-                        <ul>
-                            <li><a href="#">Add To Cart</a></li>
-                            <li>$ 12.99</li>
-                        </ul>
+                        <div class="buys">
+                            <p id="buy" class="buy">$20.99</p>
+                            <a href="javascript:;" class="addTocart">Add To cart</a>
+                        </div>
                         <i class="fas fa-heart heart1_7 heart"></i>
                     </div>
-                    <div class="slide">
-                        <img src="shape/menu-8.jpg">
+                    <div class="slide box">
+                        <img src="shape/menu-8.jpg" class="imges">
+                        <p class="menu_name name">Cacao Dầm</p>
                         <p class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -342,18 +374,19 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star-half-alt"></i>
                         </p>
-                        <h3>Delicious Food</h3>
+                        
                         <p class="content">Lorem Ipsum Dolor Sit, Amet</p>
                         <p class="content">Consectetur Adipisicing Elit.</p>
                         <p class="content">Excepturi, Accusantium.</p>
-                        <ul>
-                            <li><a href="#">Add To Cart</a></li>
-                            <li>$ 12.99</li>
-                        </ul>
+                        <div class="buys">
+                            <p id="buy" class="buy">$20.99</p>
+                            <a href="javascript:;" class="addTocart">Add To cart</a>
+                        </div>
                         <i class="fas fa-heart heart1_8 heart"></i>
                     </div>
-                    <div class="slide">
-                        <img src="shape/menu-9.jpg">
+                    <div class="slide box">
+                        <img src="shape/menu-9.jpg" class="imges">
+                        <p class="menu_name name">Delicious Food 9</p>
                         <p class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -361,146 +394,142 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star-half-alt"></i>
                         </p>
-                        <h3>Delicious Food</h3>
+                        
                         <p class="content">Lorem Ipsum Dolor Sit, Amet</p>
                         <p class="content">Consectetur Adipisicing Elit.</p>
                         <p class="content">Excepturi, Accusantium.</p>
-                        <ul>
-                            <li><a href="#">Add To Cart</a></li>
-                            <li>$ 12.99</li>
-                        </ul>
-                        <i class="fas fa-heart heart1_1 heart"></i>
+                        <div class="buys">
+                            <p id="buy" class="buy">$20.99</p>
+                            <a href="javascript:;" class="addTocart">Add To cart</a>
+                        </div>
+                        <i class="fas fa-heart heart1_9 heart"></i>
                     </div>
                 </div>
                 <p class="shapePlus" onclick="shapePlus('menu_shape')">Xem thêm</p>
-                <p class="shapeReduce" onclick="shapeReduce('menu_shape')">end</p>
+                <p class="shapeReduce" onclick="shapeReduce('menu_shape')">Kết thúc</p>
             </div>
         </div>
         <div class="review" id="review">
             <div>
                 <p class="title1">about review</p>
                 <p class="title2">WHAT THEY SAY</p>
-                <div class="swiper-container content">
-                    <div class="swiper-wrapper">
-                        <div class="review_content swiper-slide">
-                            <div class="shapes">
-                                <div class="shape">
-                                    <img src="shape/h1.png">
-                                </div>
-                                <div class="name">
-                                    <h3>John</h3>
-                                    <p class="stars">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star-half-alt"></i>
-                                    </p>
-                                </div>
-                                <i class="fas fa-quote-right"></i>
+                <div class="content">
+                    <div class="review_content">
+                        <div class="shapes">
+                            <div class="shape">
+                                <img src="shape/h1.png">
                             </div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing 
-                            elit. Sit fugiat consequuntur repellendus aperiam 
-                            deserunt nihil, corporis fugit voluptatibus voluptate 
-                            totam neque illo placeat eius quis laborum aspernatur 
-                            quibusdam. Ipsum, magni.</p>
-                        </div>
-                        <div class="review_content swiper-slide">
-                            <div class="shapes">
-                                <div class="shape">
-                                    <img src="shape/h2.png">
-                                </div>
-                                <div class="name">
-                                    <h3>John</h3>
-                                    <p class="stars">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star-half-alt"></i>
-                                    </p>
-                                </div>
-                                <i class="fas fa-quote-right"></i>
+                            <div class="name">
+                                <h3>Jen <i class="fas fa-quote-right"></i></h3>
+                                <p class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </p>
                             </div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing 
-                            elit. Sit fugiat consequuntur repellendus aperiam 
-                            deserunt nihil, corporis fugit voluptatibus voluptate 
-                            totam neque illo placeat eius quis laborum aspernatur 
-                            quibusdam. Ipsum, magni.</p>
+                            
                         </div>
-                        <div class="review_content swiper-slide">
-                            <div class="shapes">
-                                <div class="shape">
-                                    <img src="shape/h3.png">
-                                </div>
-                                <div class="name">
-                                    <h3>John</h3>
-                                    <p class="stars">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star-half-alt"></i>
-                                    </p>
-                                </div>
-                                <i class="fas fa-quote-right"></i>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing 
+                        elit. Sit fugiat consequuntur repellendus aperiam 
+                        deserunt nihil, corporis fugit voluptatibus voluptate 
+                        totam neque illo placeat eius quis laborum aspernatur 
+                        quibusdam. Ipsum, magni.</p>
+                    </div>
+                    <div class="review_content swiper-slide">
+                        <div class="shapes">
+                            <div class="shape">
+                                <img src="shape/h2.png">
                             </div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing 
-                            elit. Sit fugiat consequuntur repellendus aperiam 
-                            deserunt nihil, corporis fugit voluptatibus voluptate 
-                            totam neque illo placeat eius quis laborum aspernatur 
-                            quibusdam. Ipsum, magni.</p>
-                        </div>
-                        <div class="review_content swiper-slide">
-                            <div class="shapes">
-                                <div class="shape">
-                                    <img src="shape/h4.png">
-                                </div>
-                                <div class="name">
-                                    <h3>John</h3>
-                                    <p class="stars">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star-half-alt"></i>
-                                    </p>
-                                </div>
-                                <i class="fas fa-quote-right"></i>
+                            <div class="name">
+                                <h3>John <i class="fas fa-quote-right"></i></h3>
+                                <p class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </p>
                             </div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing 
-                            elit. Sit fugiat consequuntur repellendus aperiam 
-                            deserunt nihil, corporis fugit voluptatibus voluptate 
-                            totam neque illo placeat eius quis laborum aspernatur 
-                            quibusdam. Ipsum, magni.</p>
+                            
                         </div>
-                        <div class="review_content swiper-slide">
-                            <div class="shapes">
-                                <div class="shape">
-                                    <img src="shape/h5.png">
-                                </div>
-                                <div class="name">
-                                    <h3>John</h3>
-                                    <p class="stars">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star-half-alt"></i>
-                                    </p>
-                                </div>
-                                <i class="fas fa-quote-right"></i>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing 
+                        elit. Sit fugiat consequuntur repellendus aperiam 
+                        deserunt nihil, corporis fugit voluptatibus voluptate 
+                        totam neque illo placeat eius quis laborum aspernatur 
+                        quibusdam. Ipsum, magni.</p>
+                    </div>
+                    <div class="review_content swiper-slide">
+                        <div class="shapes">
+                            <div class="shape">
+                                <img src="shape/h3.png">
                             </div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing 
-                            elit. Sit fugiat consequuntur repellendus aperiam 
-                            deserunt nihil, corporis fugit voluptatibus voluptate 
-                            totam neque illo placeat eius quis laborum aspernatur 
-                            quibusdam. Ipsum, magni.</p>
+                            <div class="name">
+                                <h3>Tom <i class="fas fa-quote-right"></i></h3>
+                                <p class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </p>
+                            </div>
+                            
                         </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing 
+                        elit. Sit fugiat consequuntur repellendus aperiam 
+                        deserunt nihil, corporis fugit voluptatibus voluptate 
+                        totam neque illo placeat eius quis laborum aspernatur 
+                        quibusdam. Ipsum, magni.</p>
+                    </div>
+                    <div class="review_content swiper-slide">
+                        <div class="shapes">
+                            <div class="shape">
+                                <img src="shape/h4.png">
+                            </div>
+                            <div class="name">
+                                <h3>Heli <i class="fas fa-quote-right"></i></h3>
+                                <p class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </p>
+                            </div>
+                            
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing 
+                        elit. Sit fugiat consequuntur repellendus aperiam 
+                        deserunt nihil, corporis fugit voluptatibus voluptate 
+                        totam neque illo placeat eius quis laborum aspernatur 
+                        quibusdam. Ipsum, magni.</p>
                     </div>
                 </div>
             </div>
         </div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
         <div class="order" id="order">
             <div>
                 <p class="title1">Order Now</p>
@@ -553,9 +582,19 @@
 
 
 
-        <div class="load">
+        
+
+
+
+        <script src="cart.js"></script>
+
+        
+
+        <!-- <div class="load">
             <img src="shape/load2.gif">
-        </div>
+        </div> -->
+
+        
 
 
 
@@ -567,15 +606,11 @@
 
 
 
+      
 
 
-
-
-
-
-
-
-        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+        <!-- <script src="review.js"></script> -->
         <script src="chef.js"></script>
     </body>
 </html>
