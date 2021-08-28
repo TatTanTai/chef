@@ -1161,7 +1161,10 @@ div.load_off{
         padding: 5% 0;
     }
 }
-@media only screen and (max-width: 23.750em) and (min-width: 20.000em){
+@media only screen and (max-width: 25.000em) and (min-width: 23.750em){
+
+}
+@media only screen and (max-width: 25.000em) and (min-width: 21.250em){
     header > .logo{
         width: 55%;
         font-size: 2rem;
@@ -1184,7 +1187,7 @@ div.load_off{
         top: 6%;
     }
 }
-@media only screen and (max-width: 20.000em){
+@media only screen and (max-width: 21.250em){
     header > .logo{
         width: 50%;
         font-size: 1.5rem;
