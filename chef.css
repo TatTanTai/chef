@@ -1160,6 +1160,12 @@ div.load_off{
     div.menu > div{
         padding: 5% 0;
     }
+    section.form_search{
+        top: 5.5%;
+    }
+    section.form_search > input{
+        width: 90%;
+    }
 }
 @media only screen and (max-width: 25.000em) and (min-width: 23.750em){
 
@@ -1193,7 +1199,13 @@ div.load_off{
         font-size: 1.1rem;
     }
     section.menu2, section.form_cart{
-        top: 6%;
+        top: 6.5%;
+    }
+    section.form_search{
+        top: 6.5%;
+    }
+    section.form_search > input{
+        width: 90%;
     }
 }
 @media only screen and (max-width: 21.250em){
@@ -1211,6 +1223,9 @@ div.load_off{
     }
     .numberCartttt{
         right: .5rem;
+    }
+    section.form_search > input{
+        width: 85%;
     }
 }
 
